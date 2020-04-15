@@ -16,7 +16,7 @@ const agregarTweet = (e)=>{
     if(tweet.value != ''){
         const tweet = document.querySelector('#tweet').value;
         const li = document.createElement('li');
-        li.className = 'pt-4 w-50'
+        li.className = 'pt-4'
         li.innerHTML = tweet
         listaTweet.append(li);
         const buttonBorrar = document.createElement('button');
