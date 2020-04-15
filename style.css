@@ -8,3 +8,12 @@
     border: none;
     cursor: pointer;
 }
+
+li{
+    height: auto;
+    margin: 20px;
+    color: black;
+    box-shadow: 4px 4px 4px grey, -4px -4px 4px grey;
+    padding: 20px;
+    background-color: rgb(238, 224, 206);
+}
