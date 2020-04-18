@@ -25,7 +25,7 @@ const agregarTweet = (e)=>{
         li.append(buttonBorrar);
         agregarLocalStorage(tweet)
     } else{
-       alert('Escribir Tweet')
+       alert('Escribir Nota')`
     }
   
     formulario.reset()
@@ -35,13 +35,31 @@ const agregarTweet = (e)=>{
 function borrarTweet(e) {
     e.preventDefault()
     //console.log('diste click en la lista')
-    if(e.target.className === 'borrar-tweet') {
+    if(e.target.className){
         e.target.parentElement.remove()
-        borrarTweetLocalStorage(e.target.parentElement.innerText)
+        borrarTweetsLocalStorage(e.target.parentElement.innerText)
         //console.log(e.target.parentElement.innerText)
     } 
  
 }
+const borrarTweetsLocalStorage = (tweet)=>{
+    let tweets;
+    let tweetBorrado;
+    // así se obtiene el tweet a borrar y cortado 
+    tweetBorrado = tweet.substring(0, tweet.length - 1)
+ 
+    tweets = obtenerTweetsLocalStorage(); 
+ 
+    tweets.forEach(function(tweet, index){
+        if(tweetBorrado === tweet) {
+            tweets.splice(index, 1)
+        }
+    })
+console.log(tweets);
+
+}
+
+
    
 // Agregar el tweets al LocalStorage
 const agregarLocalStorage = (tweet)=>{
@@ -78,9 +96,7 @@ const localStorageListo = ()=>{
     li.append(buttonBorrar);
    });
 }
-const borrarTweetsLocalStorage = ()=>{
-    let tweets;
- 
-}
+
+
  
 funcGeneral()
