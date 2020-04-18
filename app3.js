@@ -42,22 +42,22 @@ function borrarTweet(e) {
     } 
  
 }
-const borrarTweetsLocalStorage = (tweet)=>{
-    let tweets;
-    let tweetBorrado;
+//const borrarTweetsLocalStorage = (tweet)=>{
+  //  let tweets;
+  //  let tweetBorrado;
     // así se obtiene el tweet a borrar y cortado 
-    tweetBorrado = tweet.substring(0, tweet.length - 1)
+   // tweetBorrado = tweet.substring(0, tweet.length - 1)
  
-    tweets = obtenerTweetsLocalStorage(); 
+    // tweets = obtenerTweetsLocalStorage(); 
  
-    tweets.forEach(function(tweet, index){
-        if(tweetBorrado === tweet) {
-            tweets.splice(index, 1)
-        }
-    })
-console.log(tweets);
-
-}
+    // tweets.forEach(function(tweet, index){
+       // if(tweetBorrado === tweet) {
+         //   tweets.splice(index, 1)
+       // }
+   // })
+//console.log(tweets);
+//
+//}
 
 
    
